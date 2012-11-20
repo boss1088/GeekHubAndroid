@@ -12,5 +12,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name="SettingsActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+        <receiver
+                android:name="com.geekhub.examples.android.StartActivity$BroadcastListener">
+            <intent-filter>
+                <action	android:name="com.geekhub.examples.android.ACTION_SETTING_CHANGED" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
