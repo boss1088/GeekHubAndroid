@@ -55,6 +55,13 @@ public class LoadParseJsonFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        _self.restore = true;
+    }
+
     private void loadData() {
         showLoadingIndicator();
 
